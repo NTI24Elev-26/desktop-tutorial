@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Addition</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+  <div class="navbar">
+    <div class="logo">
+      <img src="logo.png" alt="Logga">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Hem</a></li>
+        <li><a href="addition.html">Addition</a></li>
+        <li><a href="subtraktion.html">Subtraktion</a></li>
+        <li><a href="multiplikation.html">Multiplikation</a></li>
+        <li><a href="division.html">Division</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="login.html" id="loginLink">Logga in</a></li>
+        <li id="userInfo" style="display:none;">Välkommen, <span id="username"></span> <button onclick="logout()">Logga ut</button> <button onclick="deleteAccount()">Ta bort konto</button></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <aside class="menu">
+    <ul>
+      <li><a href="#section1">Introduktion till Addition</a></li>
+      <li><a href="#section2">Enkla Uppgifter</a></li>
+      <li><a href="#section3">Medelsvåra Uppgifter</a></li>
+      <li><a href="#section4">Svåra Uppgifter</a></li>
+    </ul>
+  </aside>
+
+  <div class="content">
+    <section id="section1">
+      <h2>Introduktion till Addition</h2>
+      <p>Addition är en av de fyra grundläggande räknesätten. Det handlar om att lägga ihop två eller flera tal för att få en summa.</p>
+    </section>
+    <section id="section2">
+      <h2>Enkla Uppgifter</h2>
+      <form id="easyAdditionForm">
+        <p>2 + 3 = <input type="number" id="easy1" required></p>
+        <p>7 + 5 = <input type="number" id="easy2" required></p>
+        <p>10 + 4 = <input type="number" id="easy3" required></p>
+        <button type="button" onclick="checkEasyAddition()">Rätta</button>
+      </form>
+      <p id="easyResult"></p>
+    </section>
+    <section id="section3">
+      <h2>Medelsvåra Uppgifter</h2>
+      <form id="mediumAdditionForm">
+        <p>15 + 8 = <input type="number" id="medium1" required></p>
+        <p>22 + 14 = <input type="number" id="medium2" required></p>
+        <p>30 + 25 = <input type="number" id="medium3" required></p>
+        <button type="button" onclick="checkMediumAddition()">Rätta</button>
+      </form>
+      <p id="mediumResult"></p>
+    </section>
+    <section id="section4">
+      <h2>Svåra Uppgifter</h2>
+      <form id="hardAdditionForm">
+        <p>45 + 37 = <input type="number" id="hard1" required></p>
+        <p>68 + 52 = <input type="number" id="hard2" required></p>
+        <p>89 + 74 = <input type="number" id="hard3" required></p>
+        <button type="button" onclick="checkHardAddition()">Rätta</button>
+      </form>
+      <p id="hardResult"></p>
+    </section>
+  </div>
+
+  <aside class="adds">
+    <div class="ad">
+      <img src="ad1.jpg" alt="Reklam 1">
+    </div>
+    <div class="ad">
+      <img src="ad2.jpg" alt="Reklam 2">
+    </div>
+  </aside>
+</main>
+
+<footer>
+  <div class="footer-content">
+    <div class="footer-logo">
+      <img src="logo.png" alt="Logga">
+    </div>
+    <div class="contact-info">
+      <p>Kontaktuppgifter:</p>
+      <p>Email: john doe@matheasy.se</p>
+      <p>Telefon: 070-123 45 67</p>
+    </div>
+  </div>
+  <p>Denna sida är för undervisande syfte och bilder används under "fair use".</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
