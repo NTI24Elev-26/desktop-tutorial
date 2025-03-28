@@ -128,7 +128,7 @@ function checkEasySubtraction() {
     if (parseInt(medium2) === 6) correct++;
     if (parseInt(medium3) === 6) correct++;
 
-    document.getElementById('mediumResult').textContent = `Du fick ${correct} av 3 rätt!`;
+    document.getElementById('easyResult').textContent = `Du fick ${correct} av 3 rätt!`;
 }
 
 function checkMediumSubtraction() {
