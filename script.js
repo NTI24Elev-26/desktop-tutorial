@@ -118,6 +118,19 @@ function checkHardAddition() {
 }
 
 // Lägg till liknande funktioner för subtraktion, multiplikation och division här...
+function checkEasySubtraction() {
+    const medium1 = document.getElementById('easy1').value;
+    const medium2 = document.getElementById('easy2').value;
+    const medium3 = document.getElementById('easy3').value;
+
+    let correct = 0;
+    if (parseInt(medium1) === 2) correct++;
+    if (parseInt(medium2) === 6) correct++;
+    if (parseInt(medium3) === 6) correct++;
+
+    document.getElementById('mediumResult').textContent = `Du fick ${correct} av 3 rätt!`;
+}
+
 function checkMediumSubtraction() {
     const medium1 = document.getElementById('medium1').value;
     const medium2 = document.getElementById('medium2').value;
