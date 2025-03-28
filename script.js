@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const password = document.getElementById('password').value;
 
             const users = JSON.parse(localStorage.getItem('users')) || [];
-            const user = users.find(u => u.email === email && u.password === password);//checkar om användarnamnen, lösenord och mejl matchar
+            const user = users.find(u => u.email === email && u.password === password);// checkar om användarnamnen, lösenord och mejl matchar
 
             if (user) {
                 sessionStorage.setItem('loggedInUser', JSON.stringify(user));
