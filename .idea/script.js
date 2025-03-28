@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const usernameSpan = document.getElementById('username');
 
     const loggedInUser = sessionStorage.getItem('loggedInUser');
+    //massa variabler
     if (loggedInUser) {
         const userData = JSON.parse(loggedInUser);
         if (loginLink && userInfo) {
@@ -22,14 +23,14 @@ document.addEventListener('DOMContentLoaded', function() {
             const password = document.getElementById('password').value;
 
             const users = JSON.parse(localStorage.getItem('users')) || [];
-            const user = users.find(u => u.email === email && u.password === password);
+            const user = users.find(u => u.email === email && u.password === password);//checkar om användarnamnen, lösenord och mejl matchar
 
             if (user) {
                 sessionStorage.setItem('loggedInUser', JSON.stringify(user));
                 alert('Välkommen ' + user.username);
                 window.location.href = 'index.html';
             } else {
-                alert('Fel email eller lösenord');
+                alert('Fel email eller lösenord');//om fel mejl/lösenord
             }
         });
     }
@@ -42,19 +43,19 @@ document.addEventListener('DOMContentLoaded', function() {
             const password = document.getElementById('password').value;
             const confirmPassword = document.getElementById('confirmPassword').value;
 
-            if (password !== confirmPassword) {
+            if (password !== confirmPassword) { //checkar om lösenord matchar confirmpassword
                 alert('Lösenorden matchar inte');
                 return;
             }
 
-            const users = JSON.parse(localStorage.getItem('users')) || [];
+            const users = JSON.parse(localStorage.getItem('users')) || []; //kollar lokala storage om användaren redan finns
             if (users.some(u => u.email === email)) {
                 alert('Användaren finns redan');
                 return;
             }
 
-            users.push({ username, email, password });
-            localStorage.setItem('users', JSON.stringify(users));
+            users.push({ username, email, password }); //lägger till användare
+            localStorage.setItem('users', JSON.stringify(users)); //konverterar datan till en json sträng för att mer effektivt spara data
             alert('Konto skapat');
             window.location.href = 'login.html';
         });
@@ -90,7 +91,6 @@ function checkEasyAddition() {
 
     document.getElementById('easyResult').textContent = `Du fick ${correct} av 3 rätt!`;
 }
-
 function checkMediumAddition() {
     const medium1 = document.getElementById('medium1').value;
     const medium2 = document.getElementById('medium2').value;
